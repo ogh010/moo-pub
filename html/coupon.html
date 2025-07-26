@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쿠폰함</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/page.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <style>
+      .coupon-list {
+        margin: 28px 0 18px;
+      }
+      .coupon-card {
+        background: #fffde7;
+        border-radius: 12px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+        padding: 20px 18px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        animation: fadeIn 0.7s;
+      }
+      .coupon-card.used {
+        background: #f5f5f5;
+        color: #bbb;
+      }
+      .coupon-card .icon {
+        flex-shrink: 0;
+      }
+      .coupon-card .info {
+        flex: 1;
+      }
+      .coupon-card .title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .coupon-card .date {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 2px;
+      }
+      .coupon-card .desc {
+        font-size: 13px;
+        color: #666;
+      }
+      .coupon-card .badge {
+        font-size: 12px;
+        color: #fff;
+        background: #1976d2;
+        border-radius: 8px;
+        padding: 2px 8px;
+        margin-left: 8px;
+      }
+      .coupon-card.used .badge {
+        background: #bbb;
+      }
+      .coupon-notice {
+        font-size: 13px;
+        color: #888;
+        background: #f7fafd;
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <img src="../assets/img/icon-coupon.svg" width="22" alt="쿠폰" />
+          쿠폰함
+        </div>
+      </header>
+      <main style="flex: 1">
+        <div class="coupon-list fade-in">
+          <div class="coupon-card">
+            <div class="icon">
+              <img src="../assets/img/icon-coupon.svg" width="36" alt="쿠폰" />
+            </div>
+            <div class="info">
+              <div class="title">
+                25,000원 할인 <span class="badge">사용가능</span>
+              </div>
+              <div class="date">2025.07.18 ~ 2025.08.19 (25일 남음)</div>
+              <div class="desc">정기권 연장 쿠폰</div>
+            </div>
+          </div>
+          <div class="coupon-card used">
+            <div class="icon">
+              <img src="../assets/img/icon-coupon.svg" width="36" alt="쿠폰" />
+            </div>
+            <div class="info">
+              <div class="title">
+                100% 할인 <span class="badge">기간만료</span>
+              </div>
+              <div class="date">2025.07.12 ~ 2025.07.20</div>
+              <div class="desc">시원한곳에서 오늘 2시간 무료사용</div>
+            </div>
+          </div>
+          <div class="coupon-card used">
+            <div class="icon">
+              <img src="../assets/img/icon-coupon.svg" width="36" alt="쿠폰" />
+            </div>
+            <div class="info">
+              <div class="title">
+                30% 할인 <span class="badge">사용완료</span>
+              </div>
+              <div class="date">2025.07.13 ~ 2025.07.18</div>
+              <div class="desc">당일권 30% 재택탈출구 여기어때요~</div>
+            </div>
+          </div>
+        </div>
+        <div class="coupon-notice slide-up">
+          <b>쿠폰 유의 사항</b><br />
+          1. 쿠폰마다 사용 조건이 상이하니 반드시 쿠폰별 '사용가능조건'을
+          확인하세요.<br />
+          2. 쿠폰은 최대 2개까지 중복 사용 가능합니다.<br />
+          3. 환불할 경우, 사용한 쿠폰은 복구되지 않습니다.<br />
+          4. '선착순' 쿠폰은 조기 마감될 경우, 쿠폰이 만료 처리될 수 있습니다.
+        </div>
+      </main>
+      <nav class="footer-nav">
+        <div class="footer-nav__item">
+          <a href="./pass.html"
+            ><img
+              src="../assets/img/icon-pass.svg"
+              alt="이용권"
+            /><br />이용권</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./seat.html"
+            ><img src="../assets/img/icon-seat.svg" alt="좌석" /><br />좌석</a
+          >
+        </div>
+        <div class="footer-nav__item active">
+          <a href="./coupon.html"
+            ><img
+              src="../assets/img/icon-coupon.svg"
+              alt="쿠폰"
+            /><br />쿠폰함</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./alarm.html"
+            ><img src="../assets/img/icon-alarm.svg" alt="알림" /><br />알림</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./menu.html"
+            ><img src="../assets/img/icon-menu.svg" alt="메뉴" /><br />메뉴</a
+          >
+        </div>
+      </nav>
+    </div>
+    <script src="../js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/page.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <style>
+      body {
+        background: #f8fafd;
+      }
+      .auth-wrap {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        border-radius: 16px;
+        margin-top: 48px;
+      }
+      .auth-logo {
+        text-align: center;
+        margin-bottom: 18px;
+      }
+      .auth-logo img {
+        width: 48px;
+        height: 48px;
+      }
+      .auth-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -1px;
+      }
+      .auth-step {
+        text-align: center;
+        font-size: 14px;
+        color: #1976d2;
+        margin-bottom: 18px;
+      }
+      .auth-form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .auth-form input {
+        font-size: 1rem;
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        background: #f7fafd;
+        transition: border 0.2s;
+      }
+      .auth-form input:focus {
+        border-color: #1976d2;
+        background: #fff;
+      }
+      .auth-form .row {
+        display: flex;
+        gap: 10px;
+      }
+      .auth-form .error {
+        color: #e53935;
+        font-size: 13px;
+        margin-top: 2px;
+      }
+      .auth-form .guide {
+        font-size: 12px;
+        color: #888;
+        margin-top: 2px;
+        margin-left: 2px;
+      }
+      .auth-form .terms {
+        font-size: 13px;
+        color: #666;
+        margin: 8px 0 0 2px;
+      }
+      .auth-form .terms label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .auth-form .terms a {
+        color: #1976d2;
+        text-decoration: underline;
+      }
+      .auth-btn {
+        width: 100%;
+        background: #1976d2;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 0;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .auth-btn:disabled {
+        background: #bdbdbd;
+        cursor: not-allowed;
+      }
+      .auth-bottom {
+        text-align: center;
+        margin-top: 18px;
+        font-size: 14px;
+        color: #888;
+      }
+      .auth-bottom a {
+        color: #1976d2;
+        text-decoration: underline;
+      }
+      .pw-toggle {
+        position: relative;
+      }
+      .pw-toggle-btn {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      @media (max-width: 600px) {
+        .auth-logo img {
+          width: 40px;
+          height: 40px;
+        }
+        .auth-title {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="auth-wrap">
+      <div class="auth-logo">
+        <img src="../assets/img/icon-pass.svg" alt="로고" />
+      </div>
+      <div class="auth-title">회원가입</div>
+      <div class="auth-step">STEP 1/1 : 기본정보 입력</div>
+      <form class="auth-form" autocomplete="off">
+        <input type="text" placeholder="이름 (실명 입력)" required />
+        <div class="guide">실명을 입력해 주세요.</div>
+        <input type="tel" placeholder="휴대폰 번호 (숫자만)" required />
+        <div class="guide">- 없이 숫자만 입력</div>
+        <div class="row">
+          <div class="pw-toggle" style="flex: 1">
+            <input
+              type="password"
+              placeholder="비밀번호 (8자 이상)"
+              required
+              id="pw1"
+            />
+            <button
+              type="button"
+              class="pw-toggle-btn"
+              onclick="togglePw('pw1', this)"
+            >
+              👁️
+            </button>
+          </div>
+          <div class="pw-toggle" style="flex: 1">
+            <input
+              type="password"
+              placeholder="비밀번호 확인"
+              required
+              id="pw2"
+            />
+            <button
+              type="button"
+              class="pw-toggle-btn"
+              onclick="togglePw('pw2', this)"
+            >
+              👁️
+            </button>
+          </div>
+        </div>
+        <div class="guide">영문, 숫자, 특수문자 포함 8자 이상</div>
+        <input type="date" placeholder="생년월일" required />
+        <div class="terms">
+          <label
+            ><input type="checkbox" required />
+            <a href="#">이용약관</a> 전체동의</label
+          >
+        </div>
+        <button class="auth-btn" type="submit">가입하기</button>
+        <div class="error" style="display: none">
+          비밀번호가 일치하지 않습니다.
+        </div>
+      </form>
+      <div class="auth-bottom">
+        이미 계정이 있으신가요? <a href="./login.html">로그인</a>
+      </div>
+    </div>
+    <script>
+      function togglePw(id, btn) {
+        const input = document.getElementById(id);
+        if (input.type === "password") {
+          input.type = "text";
+          btn.textContent = "🙈";
+        } else {
+          input.type = "password";
+          btn.textContent = "👁️";
+        }
+      }
+    </script>
+  </body>
+</html>

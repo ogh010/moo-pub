@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이용권 선택</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/page.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <style>
+      .pass-list {
+        margin: 28px 0 18px;
+      }
+      .pass-card {
+        background: #e3f2fd;
+        border-radius: 12px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+        padding: 20px 18px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        animation: fadeIn 0.7s;
+        cursor: pointer;
+        transition: box-shadow 0.2s, background 0.2s;
+      }
+      .pass-card:hover {
+        background: #bbdefb;
+        box-shadow: 0 2px 10px rgba(25, 118, 210, 0.1);
+      }
+      .pass-card .icon {
+        flex-shrink: 0;
+      }
+      .pass-card .info {
+        flex: 1;
+      }
+      .pass-card .title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: #1976d2;
+      }
+      .pass-card .desc {
+        font-size: 13px;
+        color: #666;
+      }
+      .pass-card .remain {
+        font-size: 13px;
+        color: #888;
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <img src="../assets/img/icon-pass.svg" width="22" alt="이용권" />
+          이용권 선택
+        </div>
+      </header>
+      <main style="flex: 1">
+        <div class="pass-list fade-in">
+          <div class="pass-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">
+                당일권
+                <span style="font-size: 13px; color: #1976d2"
+                  >(9998개 남음)</span
+                >
+              </div>
+              <div class="desc">오늘 하루만 시간별로 이용 (1,2,4,8시간 등)</div>
+              <div class="remain">1일권</div>
+            </div>
+          </div>
+          <div class="pass-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">
+                시간권
+                <span style="font-size: 13px; color: #1976d2"
+                  >(209894개 남음)</span
+                >
+              </div>
+              <div class="desc">
+                충전시간에서 이용한 시간만큼 차감 (50, 100시간 등)
+              </div>
+              <div class="remain">+10시간권</div>
+            </div>
+          </div>
+          <div class="pass-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">
+                기간권
+                <span style="font-size: 13px; color: #1976d2"
+                  >(229940개 남음)</span
+                >
+              </div>
+              <div class="desc">
+                1일~1년까지 기간별 이용권 (1,7,30,365일 등)
+              </div>
+              <div class="remain">31일권</div>
+            </div>
+          </div>
+          <div class="pass-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">1인 독립형 기간권</div>
+              <div class="desc">
+                일정 기간동안 무제한 이용 (15,30,45,60일 등)
+              </div>
+              <div class="remain">독립형 30일권</div>
+            </div>
+          </div>
+          <div class="pass-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">예약룸 당일권/사전예약</div>
+              <div class="desc">
+                원하는 미팅룸과 시간을 미리 예약 (30분 이후부터 예약가능)
+              </div>
+              <div class="remain">예약권</div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <nav class="footer-nav">
+        <div class="footer-nav__item">
+          <a href="./pass.html"
+            ><img
+              src="../assets/img/icon-pass.svg"
+              alt="이용권"
+            /><br />이용권</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./seat.html"
+            ><img src="../assets/img/icon-seat.svg" alt="좌석" /><br />좌석</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./coupon.html"
+            ><img
+              src="../assets/img/icon-coupon.svg"
+              alt="쿠폰"
+            /><br />쿠폰함</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./alarm.html"
+            ><img src="../assets/img/icon-alarm.svg" alt="알림" /><br />알림</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./menu.html"
+            ><img src="../assets/img/icon-menu.svg" alt="메뉴" /><br />메뉴</a
+          >
+        </div>
+      </nav>
+    </div>
+    <script src="../js/common.js"></script>
+  </body>
+</html>

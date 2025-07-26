@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴/프로필</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/page.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <style>
+      .profile-card {
+        background: #f7fafd;
+        border-radius: 12px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+        padding: 22px 18px;
+        margin: 28px 0 18px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        animation: fadeIn 0.7s;
+      }
+      .profile-card .icon {
+        flex-shrink: 0;
+      }
+      .profile-card .info {
+        flex: 1;
+      }
+      .profile-card .name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+      .profile-card .phone {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 2px;
+      }
+      .profile-card .birth {
+        font-size: 13px;
+        color: #888;
+      }
+      .profile-card .gender {
+        font-size: 13px;
+        color: #888;
+      }
+      .profile-card .badge {
+        font-size: 12px;
+        color: #fff;
+        background: #1976d2;
+        border-radius: 8px;
+        padding: 2px 8px;
+        margin-left: 8px;
+      }
+      .menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+      .menu-item {
+        flex: 1 1 40%;
+        min-width: 120px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+        padding: 18px 0;
+        text-align: center;
+        font-size: 15px;
+        color: #1976d2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: box-shadow 0.2s, background 0.2s;
+        animation: scaleIn 0.5s;
+      }
+      .menu-item:hover {
+        background: #e3f2fd;
+      }
+      .menu-item img {
+        width: 28px;
+        height: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <img src="../assets/img/icon-menu.svg" width="22" alt="메뉴" />
+          메뉴/프로필
+        </div>
+      </header>
+      <main style="flex: 1">
+        <div class="profile-card fade-in">
+          <div class="icon">
+            <img src="../assets/img/icon-menu.svg" width="38" alt="프로필" />
+          </div>
+          <div class="info">
+            <div class="name">오가희 <span class="badge">여성</span></div>
+            <div class="phone">01092245158</div>
+            <div class="birth">1998-06-07</div>
+          </div>
+        </div>
+        <div class="menu-list slide-up">
+          <div class="menu-item">
+            <img src="../assets/img/icon-pass.svg" alt="이용권" />보유 이용권
+          </div>
+          <div class="menu-item">
+            <img src="../assets/img/icon-coupon.svg" alt="쿠폰" />쿠폰 1
+          </div>
+          <div class="menu-item">
+            <img src="../assets/img/icon-seat.svg" alt="좌석" />My 카드
+          </div>
+          <div class="menu-item">
+            <img src="../assets/img/icon-alarm.svg" alt="알림" />구매내역
+          </div>
+          <div class="menu-item">
+            <img src="../assets/img/icon-menu.svg" alt="카톡" />카톡문의
+          </div>
+        </div>
+      </main>
+      <nav class="footer-nav">
+        <div class="footer-nav__item">
+          <a href="./pass.html"
+            ><img
+              src="../assets/img/icon-pass.svg"
+              alt="이용권"
+            /><br />이용권</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./seat.html"
+            ><img src="../assets/img/icon-seat.svg" alt="좌석" /><br />좌석</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./coupon.html"
+            ><img
+              src="../assets/img/icon-coupon.svg"
+              alt="쿠폰"
+            /><br />쿠폰함</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./alarm.html"
+            ><img src="../assets/img/icon-alarm.svg" alt="알림" /><br />알림</a
+          >
+        </div>
+        <div class="footer-nav__item active">
+          <a href="./menu.html"
+            ><img src="../assets/img/icon-menu.svg" alt="메뉴" /><br />메뉴</a
+          >
+        </div>
+      </nav>
+    </div>
+    <script src="../js/common.js"></script>
+  </body>
+</html>

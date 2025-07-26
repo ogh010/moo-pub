@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결제(카드사)</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/page.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <style>
+      .pay-box {
+        background: #f7fafd;
+        border-radius: 12px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+        padding: 22px 18px;
+        margin: 28px 0 18px;
+        animation: fadeIn 0.7s;
+      }
+      .pay-box .title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .pay-box .desc {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 2px;
+      }
+      .pay-box .price {
+        font-size: 1.5rem;
+        color: #1976d2;
+        font-weight: 700;
+        margin: 10px 0 0;
+      }
+      .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 18px 0;
+      }
+      .card-item {
+        flex: 1 1 40%;
+        min-width: 120px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+        padding: 14px 0;
+        text-align: center;
+        font-size: 15px;
+        color: #1976d2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: box-shadow 0.2s, background 0.2s;
+        animation: scaleIn 0.5s;
+      }
+      .card-item.selected,
+      .card-item:hover {
+        background: #e3f2fd;
+      }
+      .agree-list {
+        margin: 18px 0;
+      }
+      .agree-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+      .agree-item input[type="checkbox"] {
+        accent-color: #1976d2;
+      }
+      .pay-btn {
+        width: 100%;
+        background: #1976d2;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 0;
+        margin-top: 18px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .pay-btn:disabled {
+        background: #bdbdbd;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <img src="../assets/img/icon-pass.svg" width="22" alt="이용권" />
+          결제(카드사)
+        </div>
+      </header>
+      <main style="flex: 1">
+        <div class="pay-box fade-in">
+          <div class="title">자유석/기간권/01092245158/1일/구입</div>
+          <div class="desc">별도 제공기간 없음</div>
+          <div class="price">21,600원</div>
+        </div>
+        <div class="card-list slide-up">
+          <div class="card-item selected">KB Pay(국민)</div>
+          <div class="card-item">신한(SOL페이)</div>
+          <div class="card-item">삼성</div>
+          <div class="card-item">현대</div>
+          <div class="card-item">롯데</div>
+          <div class="card-item">BC</div>
+        </div>
+        <div class="agree-list slide-up">
+          <div class="agree-item">
+            <input type="checkbox" /> 이용약관 전체동의
+          </div>
+          <div class="agree-item">
+            <input type="checkbox" /> 전자금융거래 이용약관 동의
+          </div>
+          <div class="agree-item">
+            <input type="checkbox" /> 개인정보 수집 및 이용에 대한 동의
+          </div>
+          <div class="agree-item">
+            <input type="checkbox" /> 개인정보 제 3자 제공약관 동의
+          </div>
+        </div>
+        <button class="pay-btn" disabled>모두 동의 후 진행</button>
+      </main>
+      <nav class="footer-nav">
+        <div class="footer-nav__item">
+          <a href="./pass.html"
+            ><img
+              src="../assets/img/icon-pass.svg"
+              alt="이용권"
+            /><br />이용권</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./seat.html"
+            ><img src="../assets/img/icon-seat.svg" alt="좌석" /><br />좌석</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./coupon.html"
+            ><img
+              src="../assets/img/icon-coupon.svg"
+              alt="쿠폰"
+            /><br />쿠폰함</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./alarm.html"
+            ><img src="../assets/img/icon-alarm.svg" alt="알림" /><br />알림</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./menu.html"
+            ><img src="../assets/img/icon-menu.svg" alt="메뉴" /><br />메뉴</a
+          >
+        </div>
+      </nav>
+    </div>
+    <script src="../js/common.js"></script>
+  </body>
+</html>

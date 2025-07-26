@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이용권 상세 선택</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/page.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <style>
+      .detail-list {
+        margin: 28px 0 18px;
+      }
+      .detail-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+        padding: 20px 18px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        animation: fadeIn 0.7s;
+        cursor: pointer;
+        transition: box-shadow 0.2s, background 0.2s;
+      }
+      .detail-card.selected,
+      .detail-card:hover {
+        background: #e3f2fd;
+        box-shadow: 0 2px 10px rgba(25, 118, 210, 0.1);
+      }
+      .detail-card .icon {
+        flex-shrink: 0;
+      }
+      .detail-card .info {
+        flex: 1;
+      }
+      .detail-card .title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: #1976d2;
+      }
+      .detail-card .desc {
+        font-size: 13px;
+        color: #666;
+      }
+      .detail-card .price {
+        font-size: 1.1rem;
+        color: #e53935;
+        font-weight: 600;
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <img src="../assets/img/icon-pass.svg" width="22" alt="이용권" />
+          이용권 상세 선택
+        </div>
+      </header>
+      <main style="flex: 1">
+        <div class="detail-list fade-in">
+          <div class="detail-card selected">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">1일(독립룸 하루사용)</div>
+              <div class="desc">9999개 남음</div>
+              <div class="price">
+                <del style="color: #bbb">24,000원</del> 21,600원
+              </div>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">1일(라운지가좋아하루)</div>
+              <div class="desc">9998개 남음</div>
+              <div class="price">
+                <del style="color: #bbb">15,000원</del> 13,500원
+              </div>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">7일(독립룸 일주일)</div>
+              <div class="desc">9998개 남음</div>
+              <div class="price">
+                <del style="color: #bbb">95,000원</del> 86,000원
+              </div>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">15일(독립룸 보름)</div>
+              <div class="desc">9999개 남음</div>
+              <div class="price">
+                <del style="color: #bbb">170,000원</del> 153,000원
+              </div>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">30일(독립룸1개월)</div>
+              <div class="desc">9995개 남음</div>
+              <div class="price">
+                <del style="color: #bbb">275,000원</del> 250,000원
+              </div>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="icon">
+              <img src="../assets/img/icon-pass.svg" width="36" alt="이용권" />
+            </div>
+            <div class="info">
+              <div class="title">30일(라운지가 좋아)</div>
+              <div class="desc">9996개 남음</div>
+              <div class="price">
+                <del style="color: #bbb">220,000원</del> 198,000원
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <nav class="footer-nav">
+        <div class="footer-nav__item">
+          <a href="./pass.html"
+            ><img
+              src="../assets/img/icon-pass.svg"
+              alt="이용권"
+            /><br />이용권</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./seat.html"
+            ><img src="../assets/img/icon-seat.svg" alt="좌석" /><br />좌석</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./coupon.html"
+            ><img
+              src="../assets/img/icon-coupon.svg"
+              alt="쿠폰"
+            /><br />쿠폰함</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./alarm.html"
+            ><img src="../assets/img/icon-alarm.svg" alt="알림" /><br />알림</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./menu.html"
+            ><img src="../assets/img/icon-menu.svg" alt="메뉴" /><br />메뉴</a
+          >
+        </div>
+      </nav>
+    </div>
+    <script src="../js/common.js"></script>
+  </body>
+</html>

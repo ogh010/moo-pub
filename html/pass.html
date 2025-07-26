@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이용권 메인</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/page.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <style>
+      .pass-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        padding: 32px 20px 28px;
+        margin: 24px 0 16px;
+        text-align: center;
+      }
+      .pass-card .status {
+        display: inline-block;
+        font-size: 13px;
+        color: #7b1fa2;
+        background: #f3e5f5;
+        border-radius: 12px;
+        padding: 2px 12px;
+        margin-bottom: 8px;
+      }
+      .pass-card .title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .pass-card .desc {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 18px;
+      }
+      .pass-card .buy-btn {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+      .pass-card .qr {
+        margin: 18px 0;
+      }
+      .pass-card .remain {
+        font-size: 1.1rem;
+        color: #1976d2;
+        font-weight: 600;
+        margin: 12px 0 0;
+      }
+      .pass-card .info {
+        color: #888;
+        font-size: 13px;
+        margin-top: 10px;
+      }
+      .pass-card .btns {
+        display: flex;
+        gap: 8px;
+        margin-top: 18px;
+        justify-content: center;
+      }
+      .pass-card .btns button {
+        flex: 1;
+        min-width: 90px;
+      }
+      .pass-card .qr img {
+        width: 120px;
+        height: 120px;
+      }
+      .pass-card .period {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 8px;
+      }
+      .pass-card .seat {
+        font-size: 15px;
+        color: #1976d2;
+        font-weight: 500;
+        margin-bottom: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div>5158님의 이용권</div>
+        <div
+          style="
+            font-size: 15px;
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          "
+        >
+          <span style="font-size: 18px">&#128179;</span>
+          <a href="#" style="color: #222">이용권 구매</a>
+        </div>
+      </header>
+      <main style="flex: 1">
+        <!-- 이용권 없을 때 -->
+        <section class="pass-card" id="pass-empty">
+          <div class="status">운영중</div>
+          <span style="font-size: 13px; color: #888">24시간</span>
+          <div style="margin: 32px 0 24px">
+            <img
+              src="../assets/img/ticket_empty.svg"
+              alt="이용권 없음"
+              style="width: 80px; height: 80px; opacity: 0.7"
+            />
+          </div>
+          <div class="desc">
+            이용권 구매는 상단의<br /><b>이용권 구매</b> 에서도 가능합니다
+          </div>
+          <button class="buy-btn">이용권 구매</button>
+        </section>
+        <!-- 이용권 있을 때 (예시) -->
+        <section class="pass-card" id="pass-active" style="display: none">
+          <div class="status" style="background: #e0f2f1; color: #00796b">
+            입실
+          </div>
+          <span class="seat">자유석 21</span>
+          <div class="title">기간권 31일(야간토일공휴일)</div>
+          <div class="period">2025.07.18 16:59 ~ 2025.08.18 16:59</div>
+          <div class="qr">
+            <img src="../assets/img/qr_sample.png" alt="QR코드" />
+          </div>
+          <div class="remain">23일 19:02:59</div>
+          <div class="info">출입시 반드시 QR코드를 스캔하세요.</div>
+          <div class="btns">
+            <button>시간 연장</button>
+            <button>좌석 이동</button>
+            <button>퇴실</button>
+          </div>
+        </section>
+      </main>
+      <nav class="footer-nav">
+        <div class="footer-nav__item active">
+          <a href="./pass.html"
+            ><img src="../assets/img/icon-pass.svg" alt="이용권" />이용권</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./seat.html"
+            ><img src="../assets/img/icon-seat.svg" alt="좌석" />좌석<span
+              class="badge"
+              >18</span
+            ></a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./coupon.html"
+            ><img src="../assets/img/icon-coupon.svg" alt="쿠폰" />쿠폰함</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./alarm.html"
+            ><img src="../assets/img/icon-alarm.svg" alt="알림" />알림</a
+          >
+        </div>
+        <div class="footer-nav__item">
+          <a href="./menu.html"
+            ><img src="../assets/img/icon-menu.svg" alt="메뉴" />메뉴</a
+          >
+        </div>
+      </nav>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>
+      // 예시: 이용권이 있을 때/없을 때 토글 (실제론 서버 데이터로 분기)
+      // pass-active를 보이게 하려면 아래 주석 해제
+      // document.getElementById('pass-empty').style.display = 'none';
+      // document.getElementById('pass-active').style.display = '';
+    </script>
+  </body>
+</html>

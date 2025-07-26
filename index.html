@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퍼블리싱 현황표 - moo_pub</title>
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <style>
+      body {
+        font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        padding: 32px;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+      }
+      th,
+      td {
+        border: 1px solid #e0e0e0;
+        padding: 12px 10px;
+        text-align: center;
+      }
+      th {
+        background: #f1f3f5;
+      }
+      tr:nth-child(even) {
+        background: #fafbfc;
+      }
+      a {
+        color: #1976d2;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .status-done {
+        color: #388e3c;
+        font-weight: bold;
+      }
+      .status-ing {
+        color: #fbc02d;
+        font-weight: bold;
+      }
+      .status-todo {
+        color: #bdbdbd;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>퍼블리싱 현황표</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>화면명</th>
+            <th>파일명</th>
+            <th>상태</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>이용권 메인</td>
+            <td><a href="./html/pass.html" target="_blank">pass.html</a></td>
+            <td class="status-done">완료</td>
+            <td>이용권 없을 때/있을 때</td>
+          </tr>
+          <tr>
+            <td>좌석 현황</td>
+            <td><a href="./html/seat.html" target="_blank">seat.html</a></td>
+            <td class="status-done">완료</td>
+            <td>좌석 선택</td>
+          </tr>
+          <tr>
+            <td>쿠폰함</td>
+            <td>
+              <a href="./html/coupon.html" target="_blank">coupon.html</a>
+            </td>
+            <td class="status-done">완료</td>
+            <td>사용가능/완료</td>
+          </tr>
+          <tr>
+            <td>알림함</td>
+            <td><a href="./html/alarm.html" target="_blank">alarm.html</a></td>
+            <td class="status-done">완료</td>
+            <td>입실/퇴실 알림</td>
+          </tr>
+          <tr>
+            <td>메뉴/프로필</td>
+            <td><a href="./html/menu.html" target="_blank">menu.html</a></td>
+            <td class="status-done">완료</td>
+            <td>프로필/포인트/쿠폰</td>
+          </tr>
+          <tr>
+            <td>이용권 선택</td>
+            <td>
+              <a href="./html/pass_select.html" target="_blank"
+                >pass_select.html</a
+              >
+            </td>
+            <td class="status-done">완료</td>
+            <td>이용권 종류</td>
+          </tr>
+          <tr>
+            <td>이용권 결제</td>
+            <td>
+              <a href="./html/pass_pay.html" target="_blank">pass_pay.html</a>
+            </td>
+            <td class="status-done">완료</td>
+            <td>결제수단/쿠폰</td>
+          </tr>
+          <tr>
+            <td>이용권 상세 선택</td>
+            <td>
+              <a href="./html/pass_detail.html" target="_blank"
+                >pass_detail.html</a
+              >
+            </td>
+            <td class="status-done">완료</td>
+            <td>기간권/시간권 등</td>
+          </tr>
+          <tr>
+            <td>결제(카드사)</td>
+            <td><a href="./html/pay.html" target="_blank">pay.html</a></td>
+            <td class="status-done">완료</td>
+            <td>카드사 결제창</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>※ 각 화면명 클릭 시 새 창에서 확인 가능합니다.</p>
+    </div>
+  </body>
+</html>
